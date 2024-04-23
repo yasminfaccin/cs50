@@ -2,40 +2,35 @@
 #include <stdio.h>
 #include <math.h>
 
-int main(void)
-{
+int main(void){
     int start;
-  do
-  {
+  do {
     start = get_int("start: ");
-  }
- while (start < 9);
+  } while (start < 9);
 
  int end;
- do
- {
+ do{
   end = get_int("end: ");
- }
- while (end < start);
+ } while (end < start);
 
 int n = start;
 int years = 0;
 int calculator;
 
-if (start == end)
-{
-  printf(" years = 0");
-}
- do
-    {
-        n = round(n + (n / 3) - (n / 4));
-        years += 1;
-
+if (start == end) {
+        years = 0;
+    } else {
+        while (n < end) {
+            n = round(n + (n / 3.0) - (n / 4.0));
+            years++;
+        }
     }
-    while (n < end);
-    printf("Years: %i",  years);
+    if (years == 1) {
+        printf("Years: %i\n", years);
+    } else {
+        printf("Years: %i\n", years);
+    }
 }
-
 
 
 
