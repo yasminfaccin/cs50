@@ -10,12 +10,12 @@ int main() {
    printf("Digite o segundo número: ");
    scanf("%f", &num2);
 
-   printf("Selecione o operador:\n");
+   printf("Selecione a operação que você deseja fazer:\n");
    printf("1 - Adição\n");
    printf("2 - Subtração\n");
    printf("3 - Multiplicação\n");
    printf("4 - Divisão\n");
-
+   
    scanf("%d", &operador);
 
    switch (operador) {
@@ -32,12 +32,8 @@ int main() {
          printf("Resultado: %.2f\n", resultado);
          break;
       case 4:
-         if (num2 != 0) {
-            resultado = num1 / num2;
-            printf("Resultado: %.2f\n", resultado);
-         } else {
-            printf("Divisão por zero não é permitida.\n");
-         }
+         resultado = num1 / num2;
+         printf("Resultado: %.2f\n", resultado);
          break;
       default:
          printf("Operador inválido.\n");
